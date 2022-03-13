@@ -1,13 +1,13 @@
 package com.junit;
 
 /*
- *  UC7- As a User need to follow pre-defined Password rules.
+ *  UC8- As a User need to follow pre-defined Password rules.
  * Rule1– minimum 8 Characters 
  * Rule2- Should have at least 1 Upper Case
  * Rule3- Should have at least 1 numeric number in the password
+ * Rule4- Should have at Exactly 1 Special Character in the password
  * NOTE – All rules must be passed
  */
-
 
 public class UserRegistration {
 	/*
@@ -57,9 +57,9 @@ public class UserRegistration {
 	public boolean checkPassword1(String password) {
 		return (password.matches("^(?=.*[A-Z])(?=.*[a-z]).{8,}$"));
 	}
+
 	public boolean checkPassword(String password) {
 		return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"));
 	}
-	
 
 }
