@@ -144,7 +144,7 @@ public class UserRegTest {
 	 */
 	public void mood_Analyser_Test_Sad() {
 		UserRegistration userRegistration = new UserRegistration();
-		String isMoodSad = userRegistration.moodAnalyzer("almas", "advani", "7903900074", "almas007@.com", "799235");
+		String isMoodSad = userRegistration.moodAnalyzer("rachoti", "Minajagi", "9686127142", "rachoti006@.com", "5821201");
 		Assert.assertEquals("SAD", isMoodSad);
 	}
 
