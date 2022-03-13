@@ -5,12 +5,9 @@ import org.junit.Test;
 import org.junit.Assert;
 import org.junit.Test;
 
-/*
- * 
 /**
- * UC3- As a User need to enter a valid email 
- * -E.g. abc.xyz@bl.co.in - Email has 3 mandatory parts (abc, bl& co)
- *
+ * UC4- As a User need to enter a valid phonenumber
+ * Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10 digit number
  */
 public class UserRegTest {
 
