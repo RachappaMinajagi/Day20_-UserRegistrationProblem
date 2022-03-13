@@ -1,12 +1,34 @@
 package com.junit;
 
 /*
+UC1 :-   As a User need to enter a valid First Name
+ *        - First name starts with Cap and has minimum 3 characters
+ 
+ * UC2 :-   As a User need to enter a valid Last Name
+ *        - Last name starts with Cap and has minimum 3 characters
+ 
+ * UC3 :-   As a User need to enter  a valid email
+ *        - E.g. abc.xyz@bl.co.in
+ *        - Email has 3 mandatory parts (abc, bl& co) and 2 optional (xyz & in) with precise @ and . positions
+ 
+ * UC4 :-   As a User need to follow pre-defined Mobile Format
+ *        - E.g. 91 9919819801
+ *        - Country code follow by space and 10 digit number
+ * 
+ * UC5 :-   As a User need to follow pre-defined Password rules.
+ *          Rule1- minimum 8 Characters 
+ * 
+ * UC6 :-  Rule2- Should have at least 1 Upper Case
+ * 
+ * UC7 :-  Rule3- Should have at least 1 numeric number in the password
  *  UC8- As a User need to follow pre-defined Password rules.
- * Rule1– minimum 8 Characters 
+ * Rule1â€“ minimum 8 Characters 
  * Rule2- Should have at least 1 Upper Case
  * Rule3- Should have at least 1 numeric number in the password
  * Rule4- Should have at Exactly 1 Special Character in the password
- * NOTE – All rules must be passed
+ * NOTE â€“ All rules must be passed
+ * 
+ 
  * UC9: -Should clear all email samples provided separately
  * UC10:- Write Junit Test for Happy as well as Sad test case.
  *      - Happy Test Case validates the Entry Successfully
