@@ -1,9 +1,10 @@
 package com.junit;
 
 /*
- * UC6- As a User need to follow pre-defined Password rules.
+ *  UC7- As a User need to follow pre-defined Password rules.
  * Rule1– minimum 8 Characters 
  * Rule2- Should have at least 1 Upper Case
+ * Rule3- Should have at least 1 numeric number in the password
  * NOTE – All rules must be passed
  */
 
@@ -53,8 +54,12 @@ public class UserRegistration {
 	 * Password is valid or not having Minimum 8 Characters and first letters should
 	 * be capital result will be in true or false because method is boolean type
 	 */
-	public boolean checkPassword(String password) {
+	public boolean checkPassword1(String password) {
 		return (password.matches("^(?=.*[A-Z])(?=.*[a-z]).{8,}$"));
 	}
+	public boolean checkPassword(String password) {
+		return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"));
+	}
+	
 
 }
