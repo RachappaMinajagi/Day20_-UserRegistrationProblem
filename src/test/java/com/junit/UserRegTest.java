@@ -13,7 +13,8 @@ import org.junit.Test;
  * TestCases for validating Password for rule 2-Should have at least 1 Upper
  * Case TestCases for validating Password for rule 3-Should have at least 1
  * numeric number in the password TestCases for validating Password for rule
- * 4-Should have Exactly 1 Special Character
+ * 4-Should have Exactly 1 Special Character TestCases for validating all email
+ * samples provided separately
  */
 public class UserRegTest {
 
