@@ -7,6 +7,12 @@ package com.junit;
  * Rule3- Should have at least 1 numeric number in the password
  * Rule4- Should have at Exactly 1 Special Character in the password
  * NOTE – All rules must be passed
+ * UC9: -Should clear all email samples provided separately
+ * UC10:- Write Junit Test for Happy as well as Sad test case.
+ *      - Happy Test Case validates the Entry Successfully
+ *      - Sad Test Cases fails the Entry
+ * 
+ * UC11:-  JUnit Parameterized Test to validate multiple entry for the Email Address    
  */
 
 public class UserRegistration {
@@ -61,7 +67,7 @@ public class UserRegistration {
 	public boolean checkPassword(String password) {
 		return (password.matches("^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"));
 	}
-	
+
 	public String moodAnalyzer(String fName, String Lname, String phoneNum, String emailID, String password) {
 		if (checkFName(fName) == true && Lname(Lname) == true && checkEmail(emailID) == true
 				&& checkPhoneNum(phoneNum) == true && checkPassword(password) == true) {
@@ -70,5 +76,5 @@ public class UserRegistration {
 			return "SAD";
 		}
 
-}
+	}
 }
