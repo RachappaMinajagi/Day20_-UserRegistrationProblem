@@ -2,12 +2,14 @@ package com.junit;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.junit.Assert;
-import org.junit.Test;
 
-/*UC5_Password
- * As a User need to follow pre-defined Password 
- * rules.Rule1– minimum 8 Characters - NOTE – All rules must be passed
+/**
+ * TestCases for validating FirstName 
+ * TestCases for validating LastName
+ * TestCases for validating EmailID
+ * TestCases for validating PhoneNumber
+ * TestCases for validating Password for rule 1-Having minimum 8 characters
+ * TestCases for validating Password for rule 2-Should have at least 1 Upper Case 
  */
 public class UserRegTest {
 
@@ -60,17 +62,37 @@ public class UserRegTest {
 		Assert.assertFalse(isLnameINValid);
 	}
 
+	@Test
 	/*
-	 * Created method for Email and its boolean type whether Email valid or not
+	 * created method testEmailId_MustReturnTrue() for true condition
 	 */
-
-	public boolean checkEmail(String emailID) {
-		return (emailID.matches("^[0-9a-zA-Z]+([._+-][0-9a-zA-Z]+)*[@][0-9A-Za-z]+([.][a-zA-Z]{2,4})*$"));
+	public void testEmailId_MustReturnTrue() {
+		UserRegistration userRegistration = new UserRegistration();
+		/*
+		 * calling checkEmail method to see mailId is valid
+		 */
+		boolean isEmailValid = userRegistration.checkEmail("rachoti.sm@gmail.com");
+		Assert.assertTrue(isEmailValid);
 	}
 
+	@Test
+	/*
+	 * created method testEmailId_MustReturnFalse() for false condition
+	 */
+
+	public void testEmailId_MustReturnFalse() {
+		UserRegistration userRegistration = new UserRegistration();
+		boolean isEmailInvalid = userRegistration.checkEmail("rachoti@.com");
+		Assert.assertFalse(isEmailInvalid);
+	}
+
+	@Test
+	/*
+	 * created testPhoneNumber_MustReturnTrue() for True condition
+	 */
 	public void testPhoneNumber_MustReturnTrue() {
 		UserRegistration userRegistration = new UserRegistration();
-		/**
+		/*
 		 * calling checkPhoneNum method to see phoneNumber is valid
 		 */
 		boolean isPhoneNumberValid = userRegistration.checkPhoneNum("91 9686127142");
@@ -78,7 +100,7 @@ public class UserRegTest {
 	}
 
 	@Test
-	/**
+	/*
 	 * created testPhoneNumber_MustReturnFalse() for False condition
 	 */
 	public void testPhoneNumber_MustReturnFalse() {
@@ -93,10 +115,10 @@ public class UserRegTest {
 	 */
 	public void testPassword_MustReturnTrue() {
 		UserRegistration userRegistration = new UserRegistration();
-		/**
+		/*
 		 * calling checkPassword method to see Password is valid
 		 */
-		boolean isPasswordValid = userRegistration.checkPassword("abcdefghi");
+		boolean isPasswordValid = userRegistration.checkPassword("Abcdefhhj");
 		Assert.assertTrue(isPasswordValid);
 	}
 
@@ -106,7 +128,7 @@ public class UserRegTest {
 	 */
 	public void testPassword_MustReturnFalse() {
 		UserRegistration userRegistration = new UserRegistration();
-		boolean isPasswordInValid = userRegistration.checkPassword("abcd");
+		boolean isPasswordInValid = userRegistration.checkPassword("abcdefhhj");
 		Assert.assertFalse(isPasswordInValid);
 	}
 }
