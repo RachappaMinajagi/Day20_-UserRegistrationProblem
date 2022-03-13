@@ -46,7 +46,7 @@ public class UserRegTest {
 		/*
 		 * calling Lname method to see LastName is valid
 		 */
-		boolean isLnameValid = userRegistration.Lname("Advani");
+		boolean isLnameValid = userRegistration.Lname("Minajagi");
 		Assert.assertTrue(isLnameValid);
 	}
 
@@ -54,9 +54,9 @@ public class UserRegTest {
 	 * created method testLastNameInvalidMustReturnFalse for false condition
 	 */
 	@Test
-	public void testLastNameValidMustReturnFalse() {
+	public void testLastNameValidMustReturnFalse() { 
 		UserRegistration userRegistration = new UserRegistration();
-		boolean isLnameINValid = userRegistration.Lname("advani");
+		boolean isLnameINValid = userRegistration.Lname("Minajagi");
 		Assert.assertFalse(isLnameINValid);
 	}
 }
