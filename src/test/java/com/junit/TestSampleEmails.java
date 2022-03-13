@@ -39,7 +39,7 @@ public class TestSampleEmails {
 
 	@Test
 	/**
-	 * create method testEmailIds to check all the mail id's
+	 * create method testEmailIds to check all the email id's
 	 */
 	public void testEmailIds() {
 		UserRegistration userRegistration = new UserRegistration();
